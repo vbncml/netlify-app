@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  .table{
+ width:auto;
+ font-size: 12px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+  </style>
+}
+</head>
+<body>
+
+
+<!-- First Container -->
+<div class="container-fluid bg-3 text-center">
+  <h3 class="margin">Case study #1</h3>
+  <h4 class="margin"> Data description </h4>
+  <p> Dataset consists of 6362620 rows of transactions information with a columns such as 
+  step, type, amount, nameOrig, oldBalanceOrg and etc. Name,datatype of each column you can find in the table below.</p>
+  <div class = "table-responsive-sm">
+  	<table class="table center table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Column name</th>
+      <th scope="col">Datatype</th>
+      <th scope="col">What information contains</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>step</td>
+      <td>int64</td>
+      <td>Continuous variable, includes number of step of transaction</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>type</td>
+      <td>object</td>
+      <td>Categorical variable, inludes information about transaction type(payment,transfer and etc.)</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>amount</td>
+      <td>float64</td>
+      <td>Continuous variable, includes amount of money used in transaction</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>nameOrig</td>
+      <td>object</td>
+      <td>Categorical variable, includes name of origin account from which transaction was made</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>oldbalanceOrg</td>
+      <td>float64</td>
+      <td>Continuous variable, includes old balance of origin account from which transaction was made</td>
+    </tr>
+      <tr>
+      <th scope="row">6</th>
+      <td>newbalanceOrig</td>
+      <td>float64</td>
+      <td>Continuous variable, includes new balance of origin account after transaction was made</td>
+    </tr>
+      <tr>
+      <th scope="row">7</th>
+      <td>nameDest</td>
+      <td>float64</td>
+      <td>Categorical variable, includes name of destination account to which transaction was made</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>oldbalanceDest</td>
+      <td>float64</td>
+      <td>Continuous variable, includes old balance of destination account to which transaction was made</td>
+    </tr>
+      <tr>
+      <th scope="row">9</th>
+      <td>newbalanceDest</td>
+      <td>float64</td>
+      <td>Continuous variable, includes new balance of destination account to which transaction was made</td>
+    </tr>
+      <tr>
+      <th scope="row">10</th>
+      <td>isFraud</td>
+      <td>int64</td>
+      <td>Categorical variable, that indicates if transaction was fraud by 0 for no, 1 for yes</td>
+    </tr>
+     <tr>
+      <th scope="row">11</th>
+      <td>isFlaggedFraud</td>
+      <td>int64</td>
+      <td>Categorical variable, that indicates if transaction was flagged fraud by 0 for no, 1 for yes</td>
+    </tr>
+  </tbody>
+</table></div><br>
+  
+  <h4 class="margin"> Data visualisation </h4>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Scaterplot below shows, that the output variable for the given dataset is binomial </p>
+      <img src="scatter_plot.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Plot below illustrates number of transaction for each type can be seen.</p>
+      <img src="number_transaction_type.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>This plot show number of transaction by type for non-fraudulent cases.</p>
+      <img src="number_transaction_type_isfraud0.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>This plot show number of transaction for each type for fraudulent cases.</p>
+      <img src="number_transaction_type_isfraud1.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Boxplot below shows the mean amount of money for fraudulent cases.</p>
+      <img src="boxplot_transaction_type_isfraud1.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+   </div><br>
+  
+  <h4 class="margin"> Feature set </h4>
+  <p class="margin"> From the data visualistion it can be seen that to decide if transaction was fraudulent or not we need to perform binomial classification. For that purpose I excluded all the column with names of origin and destination. I added dummy variables for the transaction type such as Type_CASH_IN, Type_CASH_OUT, Type_DEBIT, Type_PAYMENT, Type_TRANSFER and excluded type column itself from the data. Dataset has also been inspected for missing values, which there was none. As a results the next variables were chosen for a feature set: amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest, Type_CASH_IN, Type_CASH_OUT, Type_DEBIT, Type_PAYMENT, Type_TRANSFER.</p>
+  
+  <h4 class="margin"> Building prediction model using Logistic Regression and Random forest</h4>
+  <p class="margin"> After feature selection, the dataset was divided into train and test data in order to fit models and to perform test. In order to build binomial classifier, first thing that comes to mind is to fit logistic regression model. Second approach I chose was Random Forest model, one of the powerful classification models. Both models were fitted using python scikit-learn library. </p>
+
+
+  <h4 class="margin"> Results </h4>
+  <p class="margin">As a result both models performed very well on test dataset. I would choose more data with variable types of fraudulaent, since in the given dataset we had fraudulent cases only for two types of transactions. If we could add more data on other types of fradulent cases, we might have better model. </p>
+  <div class="row">
+    <div class="col-sm-6">
+    	<h5>Logistic Regression</h5>
+      <p>Accuracy: 0.9979297836425874</p>
+      <img src="confusion_matrix.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-6"> 
+    	<h5>Random forest</h5>
+      <p>Accuracy: 0.9987011639859051</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3>Case study #2</h3>
+  <table class="table center table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Year</th>
+      <th scope="col">2015</th>
+      <th scope="col">2016</th>
+      <th scope="col">2017</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Total revenue</th>
+      <td>29036749.19</td>
+      <td>25730943.59</td>
+      <td>31417495.03</td>
+    </tr>
+    <tr>
+      <th scope="row">New customer revenue</th>
+      <td>0.0</td>
+      <td>18245491.01</td>
+      <td>28776235.04</td>
+    </tr>
+    <tr>
+      <th scope="row">Existing Customer Revenue Current Year</th>
+      <td>29036749.19</td>
+      <td>7485452.58</td>
+      <td>2641259.99</td>
+    </tr>
+    <tr>
+      <th scope="row">Existing Customer Revenue Prior Year</th>
+      <td>29036749.19</td>
+      <td>7465117.12</td>
+      <td>2620648.65</td>
+    </tr>
+    <tr>
+      <th scope="row">Existing customer growth</th>
+      <td>818584</td>
+      <td>818584</td>
+      <td>818584</td>
+    </tr>
+    <tr>
+      <th scope="row">Revenue lost from attrition</th>
+      <td>0.0</td>
+      <td>21571632.07</td>
+      <td>23110294.94</td>
+    </tr>
+     <tr>
+      <th scope="row">Total Customers Current Year</th>
+      <td>925176</td>
+      <td>818584</td>
+      <td>999948</td>
+    </tr>
+    <tr>
+      <th scope="row">Total Customers Previous Year</th>
+      <td>925176</td>
+      <td>925176</td>
+      <td>818584</td>
+    </tr>
+    <tr>
+      <th scope="row">New Customers</th>
+      <td>0</td>
+      <td>580248</td>
+      <td>916112</td>
+    </tr>
+    <tr>
+      <th scope="row">Lost Customers</th>
+      <td>0</td>
+      <td>686840</td>
+      <td>734748</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Github<a href="https://github.com/vbncml/gaukhar-stout-case-studies">https://github.com/vbncml/gaukhar-stout-case-studies</a></p> 
+</footer>
+
+</body>
+</html>
